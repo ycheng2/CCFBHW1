@@ -37,3 +37,4 @@ You can execute the JAR file using the following command
 The application should be running at http://localhost:8080/
 
 There are some images in the "application/test-images" folder that you can use to verify your setup.
+# CCHW1
