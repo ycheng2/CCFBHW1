@@ -28,16 +28,28 @@
 
 <body>
 
-  <body>
+<body ng-app="app" ng-controller="home as home">
 
-    <div class="container">
-
-      <form class="form-signin" method="get" action="/images">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in with Twitter</button>
-      </form>
+      <div class="container" ng-show="!home.authenticated">
+  <h2>Login</h2>
+  <div>
+    With Github: <a href="/login/github">click here</a>
+  </div>
 
     </div> <!-- /container -->
-
+<script type="text/javascript" src="/webjars/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+  angular.module("app", []).controller("home", function($http) {
+    var self = this;
+    $http.get("/user").success(function(data) {
+      self.user = data.userAuthentication.details.name;
+      self.authenticated = true;
+    }).error(function() {
+      self.user = "N/A";
+      self.authenticated = false;
+    });
+  });
+</script>
   </body>
 
 </body>
