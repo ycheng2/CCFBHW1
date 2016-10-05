@@ -8,7 +8,7 @@ multipart.maxRequestSize: 640KB
 cloud.aws.region: us-west-2
 
 # example : s3-bucket-test-1
-cloud.aws.s3.bucket: karnex
+cloud.aws.s3.bucket: lucasccbucket
 
 server.port: 8080
 github.client.accessTokenUri: https://github.com/login/oauth/access_token
