@@ -1,0 +1,18 @@
+multipart.maxFileSize: 640KB
+multipart.maxRequestSize: 640KB
+
+
+
+
+# example : us-east-1
+cloud.aws.region: us-west-2
+
+# example : s3-bucket-test-1
+cloud.aws.s3.bucket: karnex
+
+server.port: 8080
+github.client.accessTokenUri: https://github.com/login/oauth/access_token
+github.client.userAuthorizationUri: https://github.com/login/oauth/authorize
+github.client.clientAuthenticationScheme: form
+github.resource.userInfoUri: https://api.github.com/user
+
