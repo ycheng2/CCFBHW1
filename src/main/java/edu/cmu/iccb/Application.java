@@ -42,6 +42,7 @@ public class Application extends WebSecurityConfigurerAdapter {
  protected void configure(HttpSecurity http) throws Exception {
    http
      .antMatcher("/**")
+     .csrf().disable()
      .authorizeRequests()
        .antMatchers("/", "/login**", "/webjars/**","/gallery**","/github/success**").permitAll()
      .anyRequest().authenticated()
