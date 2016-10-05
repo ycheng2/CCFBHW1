@@ -43,7 +43,7 @@ public class Application extends WebSecurityConfigurerAdapter {
    http
      .antMatcher("/**")
      .authorizeRequests()
-       .antMatchers("/", "/login**", "/webjars/**","/images**","/github/success**").permitAll()
+       .antMatchers("/", "/login**", "/webjars/**","/gallery**","/github/success**").permitAll()
      .anyRequest().authenticated()
      .and().exceptionHandling()
        .and().addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class);
